@@ -10,7 +10,11 @@
 <ion-content padding>
   <h3 text-center> Select your favourite quote </h3>
   <ion-list>
-    <button ion-item *ngFor="let quoteGroup of quoteCollection">
+    <button 
+    ion-item 
+    *ngFor="let quoteGroup of quoteCollection"
+    [navPush]="quotesPage"
+    [navParams]="quoteGroup">
       <ion-icon name="{{ quoteGroup.icon }}" item-left></ion-icon>
       <h3> {{ quoteGroup.category | uppercase }} </h3>
       <p> {{ quoteGroup.quotes.length }} Quotes </p>

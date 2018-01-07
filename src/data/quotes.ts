@@ -5,7 +5,7 @@ export default [
       {
         id: '1',
         person: 'Theodore Roosevelt',
-        text: 'Believe you can and you\'re halfway there'
+        text: 'Retrieve you can and you are halfway there'
       },
       {
         id: '2',
