@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Quote } from '../../data/quote.interface';
+import { QuotesService } from '../../services/quotes';
 
 @IonicPage()
 @Component({
@@ -7,12 +9,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'favorites.html',
 })
 export class FavoritesPage {
+  quotes: Quote[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private quotesService: QuotesService) {
+
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad FavoritesPage');
+  ionViewWillEnter() {
+    this.quotes = this.quotesService.getFavouriteQuotes();
   }
-
 }
