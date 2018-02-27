@@ -13,6 +13,7 @@ import { LibraryPage } from '../pages/library/library';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { QuotesService } from '../services/quotes';
+import { SettingsService } from '../services/settings';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ BrowserModule,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    QuotesService
+    QuotesService,
+    SettingsService
   ]
 })
 export class AppModule {}
